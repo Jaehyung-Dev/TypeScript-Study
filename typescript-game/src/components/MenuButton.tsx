@@ -2,22 +2,25 @@ import React, {useState} from 'react'
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 
 const MenuButton = () => {  
-  const toggleBtnStyle = { height: '70%', aspectRatio: 1 ,marginRight: '1rem', background: 'none', border: 'none'};
+  const toggleBtnStyle = { height: '70%', aspectRatio: 1 ,marginRight: '5rem', background: 'none', border: 'none'};
   const whiteColor = { color: 'white'};
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuStyle = {
     width: '10vw',
     height: '30vh',
-    position: 'absolute',
-    top: '0',
-    right: '0',
+    position: 'fixed',
+    top: '10vh',
+    right: '1rem',
     backgroundColor: 'lightgray',
     padding: '0',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     borderRadius: '8px',
     zIndex: 1000,
-    display: isMenuOpen ? 'block' : 'none'
+    display: isMenuOpen ? 'flex' : 'none',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-around'
   } as React.CSSProperties;
 
 
@@ -30,9 +33,9 @@ const MenuButton = () => {
         <DensityMediumIcon style={whiteColor} />
       </button>
       <div style={menuStyle}>
-        <p>메뉴 1</p>
-        <p>메뉴 2</p>
-        <p>메뉴 3</p>
+        <a href='/'>Info</a>
+        <a href='/'>Ranking</a>
+        <a href='/'>Guide</a>
       </div>
     </div>
   );

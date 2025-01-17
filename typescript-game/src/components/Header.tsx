@@ -4,7 +4,7 @@ import MenuButton from './MenuButton.tsx';
 
 const Header = () => {
   const headerStyle = { width: '100%', height: '10vh', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: 'green'};
-  const logoStyle = { height: '100%', aspectRatio: 1, marginLeft: '1rem' };
+  const logoStyle = { height: '100%', aspectRatio: 1, marginLeft: '5rem' };
   const mainNameStyle = { fontSize: '2rem', fontWeight: 'bold', color: 'white' };
 
   return (
