@@ -23,7 +23,7 @@ const Footer = () => {
     </ul>
     <ul style={ulStyle}>
       <li style={liStyle}>
-        Developed by <a style={linkStyle} href='https://github.com/Jaehyung-Dev'>JaeHyung</a>
+        Developed by <a style={linkStyle} href='https://github.com/Jaehyung-Dev'>Jaehyung-Dev</a>
       </li>
       <li style={liStyle}>
       Contact :{' '}
