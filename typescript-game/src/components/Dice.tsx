@@ -50,10 +50,10 @@ const Dice = () => {
   // 숫자에 따른 3D 회전값 정의
   const diceTransforms = {
     1: 'rotateX(0deg) rotateY(0deg)',
-    2: 'rotateX(-90deg) rotateY(0deg)',
+    2: 'rotateX(90deg) rotateY(0deg)',
     3: 'rotateX(0deg) rotateY(-90deg)',
     4: 'rotateX(0deg) rotateY(90deg)',
-    5: 'rotateX(90deg) rotateY(0deg)',
+    5: 'rotateX(-90deg) rotateY(0deg)',
     6: 'rotateX(0deg) rotateY(180deg)',
   };
 
@@ -98,10 +98,10 @@ const Dice = () => {
           <div style={{ ...faceStyle, transform: 'rotateX(-90deg) translateZ(50px)' }}>
             {renderDots(dotConfigurations[2])}
           </div>
-          <div style={{ ...faceStyle, transform: 'rotateY(-90deg) translateZ(50px)' }}>
+          <div style={{ ...faceStyle, transform: 'rotateY(90deg) translateZ(50px)' }}>
             {renderDots(dotConfigurations[3])}
           </div>
-          <div style={{ ...faceStyle, transform: 'rotateY(90deg) translateZ(50px)' }}>
+          <div style={{ ...faceStyle, transform: 'rotateY(-90deg) translateZ(50px)' }}>
             {renderDots(dotConfigurations[4])}
           </div>
           <div style={{ ...faceStyle, transform: 'rotateX(90deg) translateZ(50px)' }}>
