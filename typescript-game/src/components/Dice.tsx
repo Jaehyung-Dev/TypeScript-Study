@@ -50,11 +50,11 @@ const Dice = () => {
   // 숫자에 따른 3D 회전값 정의
   const diceTransforms = {
     1: 'rotateX(0deg) rotateY(0deg)',
-    2: 'rotateX(0deg) rotateY(90deg)',
-    3: 'rotateX(0deg) rotateY(180deg)',
-    4: 'rotateX(0deg) rotateY(-90deg)',
+    2: 'rotateX(-90deg) rotateY(0deg)',
+    3: 'rotateX(0deg) rotateY(-90deg)',
+    4: 'rotateX(0deg) rotateY(90deg)',
     5: 'rotateX(90deg) rotateY(0deg)',
-    6: 'rotateX(-90deg) rotateY(0deg)',
+    6: 'rotateX(0deg) rotateY(180deg)',
   };
 
   // 숫자에 따라 렌더링될 점 위치 정의
@@ -95,19 +95,19 @@ const Dice = () => {
           <div style={{ ...faceStyle, transform: 'rotateY(0deg) translateZ(50px)' }}>
             {renderDots(dotConfigurations[1])}
           </div>
-          <div style={{ ...faceStyle, transform: 'rotateY(-90deg) translateZ(50px)' }}>
+          <div style={{ ...faceStyle, transform: 'rotateX(-90deg) translateZ(50px)' }}>
             {renderDots(dotConfigurations[2])}
           </div>
-          <div style={{ ...faceStyle, transform: 'rotateY(180deg) translateZ(50px)' }}>
+          <div style={{ ...faceStyle, transform: 'rotateY(-90deg) translateZ(50px)' }}>
             {renderDots(dotConfigurations[3])}
           </div>
           <div style={{ ...faceStyle, transform: 'rotateY(90deg) translateZ(50px)' }}>
             {renderDots(dotConfigurations[4])}
           </div>
-          <div style={{ ...faceStyle, transform: 'rotateX(-90deg) translateZ(50px)' }}>
+          <div style={{ ...faceStyle, transform: 'rotateX(90deg) translateZ(50px)' }}>
             {renderDots(dotConfigurations[5])}
           </div>
-          <div style={{ ...faceStyle, transform: 'rotateX(90deg) translateZ(50px)' }}>
+          <div style={{ ...faceStyle, transform: 'rotateX(180deg) translateZ(50px)' }}>
             {renderDots(dotConfigurations[6])}
           </div>
         </div>
