@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
+import { useNavigate } from 'react-router-dom';
 
 const MenuButton = () => {  
   const toggleBtnStyle = { height: '70%', aspectRatio: 1 ,marginRight: '5rem', background: 'none', border: 'none'};
@@ -23,6 +24,19 @@ const MenuButton = () => {
     justifyContent: 'space-around'
   } as React.CSSProperties;
 
+  const navi = useNavigate();
+  
+  const linkInfo = () => {
+    navi('/Info');
+  };
+  const linkRanking = () => {
+    alert('준비중입니다.');
+    // navi('/Ranking');
+  };
+  const linkGuide = () => {
+    alert('준비중입니다.');
+    // navi('/Guide');
+  };
 
   return (
     <div style={{ position: 'relative' }}>
@@ -33,9 +47,18 @@ const MenuButton = () => {
         <DensityMediumIcon style={whiteColor} />
       </button>
       <div style={menuStyle}>
-        <a href='/'>Info</a>
-        <a href='/'>Ranking</a>
-        <a href='/'>Guide</a>
+        <button
+          onClick={linkInfo}>
+          Info
+        </button>
+        <button
+          onClick={linkRanking}>
+          Ranking
+        </button>
+        <button
+          onClick={linkGuide}>
+          Guide
+        </button>
       </div>
     </div>
   );
