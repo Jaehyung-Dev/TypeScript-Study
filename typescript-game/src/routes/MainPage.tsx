@@ -20,7 +20,7 @@ const MainPage = () => {
       <Main>
         <button style={startBtnStyle}
           onClick={startGame}>
-          Game Start !!
+          오늘의 운세 보러가기
         </button>
       </Main>
       <Footer>
